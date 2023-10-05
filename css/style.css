@@ -1,0 +1,143 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: beige;
+    font-family: "open sans", Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 1.2em;
+}
+
+nav ul li {
+    padding: 0 3em;
+}
+
+main > article {
+    width: 100%;
+    height: 31.25em;
+    background-color: #BAB86C;
+    margin-bottom: 12.5em;
+}
+
+.achtergrond, .achtergrond_klein {
+    height: 43.75em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/achtergrond.jpg);
+    background-repeat: no-repeat;
+}
+
+.achtergrond_klein {
+    height: 400px;
+    align-items: flex-start;
+}
+
+.achtergrond h2, .achtergrond_klein h2, .achtergrond a, .achtergrond_klein a{
+    color: white;
+    font-size: 2em;
+}
+
+.achtergrond a {
+    font-size: 1em;
+}
+
+.homepagina #article-1 h2, .homepagina #article-1 p{
+    text-align: center;
+}
+
+.homepagina #article-1 div {
+    display: flex;
+    justify-content: center;
+}
+
+.homepagina #article-1 div img {
+    width: 31.25em;
+    height: 21.875em;
+    margin: 0 3.125em;
+}
+
+.homepagina .article-3 {
+    display: flex;
+    justify-content: center;
+}
+
+.homepagina .article-3 section {
+    width: 50%;
+}
+
+.homepagina .article-3 img {
+    width: 50%;
+    height: 100%;
+}
+
+.homepagina .article-4 ul {
+    list-style-type: none;
+}
+
+.recepten .article-recepten h2 {
+    text-align: center;
+}
+
+.recepten .wereldmap {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(2,70%);
+}
+
+.recepten .wereldmap img {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+.article_recpeten_inhoud {
+    height: auto;
+}
+
+.article_recpeten_inhoud > article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.article_recpeten_inhoud > article a {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: white;
+    margin: 0 10px 50px 10px;
+    border-radius: 10px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #BAB86C;
+    padding-top: 5em;
+}
