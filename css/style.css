@@ -4,60 +4,60 @@ html {
 
 body {
     margin: 0;
-    background-color: beige;
-    font-family: "open sans", Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
+    background-color: #F4F4F4;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+p, a {
+    font-family: "Open-Sans", Arial, Helvetica, sans-serif;
+    color: #33312C;
 }
 
 a {
     text-decoration: none;
     font-weight: bold;
-    color: black;
+}
+
+.achtergrond h2, .achtergrond h3, .achtergrond a, a:hover {
+    background-color: rgba(0, 0, 0, 25%);
+    border-radius: 0.1em;
 }
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     position: fixed;
     background-color: white;
     width: 100%;
 }
 
-nav ul {
+ul {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     padding: 1.2em;
 }
 
-nav ul li {
-    padding: 0 3em;
+ul li {
+    padding: 0 2em;
 }
 
-main > article {
-    width: 100%;
-    height: 31.25em;
-    background-color: #BAB86C;
-    margin-bottom: 12.5em;
-}
-
-.achtergrond, .achtergrond_klein {
-    height: 43.75em;
+.achtergrond {
+    height: 50em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(../images/achtergrond.jpg);
-    background-repeat: no-repeat;
 }
 
-.achtergrond_klein {
-    height: 400px;
-    align-items: flex-start;
+.achtergrond h2, .achtergrond h3, .achtergrond a {
+    color: #F4F4F4;
+    padding: 0.1em;
+    font-size: 3em;
 }
 
-.achtergrond h2, .achtergrond_klein h2, .achtergrond a, .achtergrond_klein a{
-    color: white;
+.achtergrond h3 {
     font-size: 2em;
 }
 
@@ -65,79 +65,146 @@ main > article {
     font-size: 1em;
 }
 
-.homepagina #article-1 h2, .homepagina #article-1 p{
+.home .achtergrond {
+    background: url(../img/img_achtergrond/home_achtergrond.jpg);
+    background-position: center;
+}
+
+.recepten_europa .achtergrond {
+    background: url(../img/img_achtergrond/europa_achtergrond.jpg);
+    background-position: center;
+}
+
+.recepten_noord-amerika .achtergrond {
+    background: url(../img/img_achtergrond/noord-amerika_achtergrond.jpg);
+    background-position: center;
+}
+
+.recepten_oost-azie .achtergrond {
+    background: url(../img/img_achtergrond/oost-azie_achtergrond.jpg);
+    background-position: center;
+}
+
+.recepten_oceanie .achtergrond {
+    background: url(../img/img_achtergrond/oceanie_achtergrond.jpg);
+    background-position: center;
+}
+
+.recepten_afrika .achtergrond {
+    background: url(../img/img_achtergrond/afrika_achtergrond.jpg);
+    background-position: center;
+}
+
+.recepten_zuid-amerika .achtergrond {
+    background: url(../img/img_achtergrond/zuid-amerika_achtergrond.jpg);
+    background-position: center;
+}
+
+.recepten_drinken .achtergrond {
+    background: url(../img/img_achtergrond/home_drinken_achtergrond.jpg);
+    background-position: center;
+}
+
+.recepten_soepen .achtergrond {
+    background: url(../img/img_achtergrond/home_soepen_achtergrond.jpg);
+    background-position: center;
+}
+
+.recepten_gerechten .achtergrond {
+    background: url(../img/img_achtergrond/home_gerechten_achtergrond.jpg);
+    background-position: center;
+}
+.recepten_bijgerechten .achtergrond {
+    background: url(../img/img_achtergrond/home_bijgerechten_achtergrond.jpg);
+    background-position: center;
+}
+
+main > article, footer > article {
+    background-color: #A4B787;
+}
+
+main > article, footer > article {
+    height: auto;
+    margin-bottom: 12.5em;
+}
+
+h2, p {
     text-align: center;
 }
 
-.homepagina #article-1 div {
+.bronvermelding h2 {
+    text-align: left;
+}
+
+.article-home > div {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.homepagina #article-1 div img {
-    width: 31.25em;
-    height: 21.875em;
-    margin: 0 3.125em;
+.article-home > div > div > section {
+    width: 37.5em;
+    height: 400px;
+    background: white;
+    border-radius: 1em;
+    margin: 2em 0;
 }
 
-.homepagina .article-3 {
-    display: flex;
-    justify-content: center;
+.home main > :nth-of-type(3) > div > div > section {
+    height: 300px;
 }
 
-.homepagina .article-3 section {
-    width: 50%;
+.article-home a {
+    background: none;
 }
 
-.homepagina .article-3 img {
-    width: 50%;
-    height: 100%;
-}
-
-.homepagina .article-4 ul {
-    list-style-type: none;
-}
-
-.recepten .article-recepten h2 {
-    text-align: center;
-}
-
-.recepten .wereldmap {
+#article-recepten div {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: repeat(2,70%);
 }
 
-.recepten .wereldmap img {
+#article-recepten div img {
     border: 1px solid black;
     width: 100%;
     height: 100%;
 }
 
-.article_recpeten_inhoud {
-    height: auto;
+.article_continenten > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
-.article_recpeten_inhoud > article {
+.article_continenten > div > div {
+    background: white;
+    border-radius: 10px;
+    margin: 0 10px 50px 10px;
+}
+
+.article_continenten > div > div > section {
+    display: flex;
+    align-items: center;
+}
+
+.article_continenten > div > div > section :first-child {
+    height: 2em;
+    padding-left: 1em;
+}
+
+.article_continenten > div > div > section img {
+    height: 2em;
+    padding-right: 0.25em;
+}
+
+main > :nth-last-of-type(5) ul, footer ul {
+    display: block;
+}
+
+footer div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-.article_recpeten_inhoud > article a {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    background: white;
-    margin: 0 10px 50px 10px;
-    border-radius: 10px;
-}
-
-
-footer {
-    display: flex;
-    justify-content: space-around;
-    background-color: #BAB86C;
-    padding-top: 5em;
+    margin: 0;
 }
