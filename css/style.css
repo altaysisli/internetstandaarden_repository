@@ -4,11 +4,13 @@ html {
 
 body {
     margin: 0;
-    background-color: #F4F4F4;
+    background: #f4f4f4;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
-p, a {
+p, a, li {
     font-family: "Open-Sans", Arial, Helvetica, sans-serif;
     color: #33312C;
 }
@@ -18,8 +20,12 @@ a {
     font-weight: bold;
 }
 
-.achtergrond h2, .achtergrond h3, .achtergrond a, a:hover {
-    background-color: rgba(0, 0, 0, 25%);
+img {
+    object-fit: cover;
+}
+
+.achtergrond h2, .achtergrond a, a:hover {
+    background: rgba(0, 0, 0, 50%);
     border-radius: 0.1em;
 }
 
@@ -28,37 +34,41 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     position: fixed;
-    background-color: white;
+    background: white;
     width: 100%;
 }
 
-ul {
+ul, ol {
     list-style-type: none;
+    padding: 0;
+}
+
+ul {
     display: flex;
     flex-wrap: wrap;
     padding: 1.2em;
 }
 
-ul li {
+li {
     padding: 0 2em;
 }
 
 .achtergrond {
-    height: 50em;
+    height: 43.75em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.achtergrond h2, .achtergrond h3, .achtergrond a {
-    color: #F4F4F4;
-    padding: 0.1em;
-    font-size: 3em;
+.achtergrond a h2 {
+    font-size: 2em;
 }
 
-.achtergrond h3 {
-    font-size: 2em;
+.achtergrond h2, .achtergrond a {
+    color: #f4f4f4;
+    padding: 0.1em;
+    font-size: 4em;
 }
 
 .achtergrond a {
@@ -119,16 +129,18 @@ ul li {
     background-position: center;
 }
 
-main > article, footer > article {
-    background-color: #A4B787;
+.kuru_fasulye .achtergrond {
+    background: url(../img/img_achtergrond/kuru_fasulye_achtergrond.jpg);
+    background-position: center;
 }
 
-main > article, footer > article {
+main > article, main > section, main > div, footer > div {
+    background: #96BB7C;
     height: auto;
-    margin-bottom: 12.5em;
+    margin-bottom: 6.25em;
 }
 
-h2, p {
+main > section, main > div, main > article {
     text-align: center;
 }
 
@@ -136,51 +148,55 @@ h2, p {
     text-align: left;
 }
 
-.article-home > div {
+.section-home > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.article-home > div > div > section {
+.section-home > div > div > section {
     width: 37.5em;
-    height: 400px;
+    height: 25em;
     background: white;
     border-radius: 1em;
     margin: 2em 0;
 }
 
 .home main > :nth-of-type(3) > div > div > section {
-    height: 300px;
+    height: 18.75em;
 }
 
-.article-home a {
+.section-home a {
     background: none;
 }
 
-#article-recepten div {
+#section-recepten div {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: repeat(2,70%);
 }
 
-#article-recepten div img {
+#section-recepten div img {
     border: 1px solid black;
     width: 100%;
     height: 100%;
 }
 
+.article_continenten > h2 {
+    padding: 2em 0;
+}
+
 .article_continenten > div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-evenly;
 }
 
 .article_continenten > div > div {
     background: white;
-    border-radius: 10px;
-    margin: 0 10px 50px 10px;
+    border-radius: 0.625em;
+    margin: 0 0.625em 3.125em 0.625em;
 }
 
 .article_continenten > div > div > section {
@@ -191,15 +207,181 @@ h2, p {
 .article_continenten > div > div > section :first-child {
     height: 2em;
     padding-left: 1em;
+    padding-right: 0.25em;
 }
 
-.article_continenten > div > div > section img {
+.kuru_fasulye main h2 {
+    color: #184D47;
+    font-size: 2em;
+}
+
+.kuru_fasulye main li {
+    text-align: left;
+}
+
+.kuru_fasulye .achtergrond h2 {
+    color: #f4f4f4;
+    font-size: 4em;
+}
+
+#recepten_voorbeschrijving {
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-radius: 0.5em;
+    margin: 0 3.125em 12.5em 3.125em;
+}
+
+#recepten_voorbeschrijving > :first-child {
+    width: 50%;
+    padding: 2em;
+}
+
+#recepten_voorbeschrijving > :first-child div ul li {
+    padding: 1em;
+    border-radius: 0.5em;
+    margin-top: 1em;
+}
+
+#recepten_voorbeschrijving > :first-child div:first-of-type ul {
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#recepten_voorbeschrijving > :first-child div:first-of-type ul li, #recepten_voorbeschrijving > :first-child div:last-of-type ul li {
+    display: flex;
+    align-items: center;
+}
+
+#recepten_voorbeschrijving > :first-child div:first-of-type ul li {
+    font-size: 1.25em;
+    justify-content: center;
+    margin-top: 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#recepten_voorbeschrijving > :first-child div:last-of-type ul {
+    justify-content: space-evenly;
+}
+
+#recepten_voorbeschrijving > :first-child div:last-of-type ul li {
+    background: #96BB7C;
+    color: white;
+}
+
+#recepten_voorbeschrijving > :first-child div:first-of-type ul li img, #recepten_voorbeschrijving > :first-child div:last-of-type ul li img {
+    height: 1em;
+    padding-right: 0.25em;
+}
+
+#recepten_voorbeschrijving > :last-child {
+    width: 50%;
+}
+
+#recepten_voorbeschrijving > :last-child img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+}
+
+.recepten_beschrijving {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    border-radius: 0.5em;
+    padding: 5em;
+    margin: 0 3.125em 12.5em 3.125em;
+}
+
+.recepten_beschrijving h2 {
+    font-size: 1.875em;
+}
+
+.recepten_beschrijving p, .recepten_voorbeschrijving p {
+    font-size: 1.25em;
+    text-align: left;
+    padding: 0 3.125em;
+}
+
+.recepten_beschrijving ul, .recepten_beschrijving ol {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.recepten_beschrijving li {
+    padding-top: 1em;
+}
+
+.recepten_beschrijving span:nth-of-type(odd) {
+    font-weight: bold;
+}
+
+.recepten_beschrijving > :first-child {
+    width: 30%;
+    background: #f4f4f4;
+    border-radius: 0.5em;
+}
+
+.recepten_beschrijving > :first-child section {
+    height: 100%;
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
+.recepten_beschrijving > :first-child section ul li {
+    padding: 2em 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.recepten_beschrijving > :nth-child(2) {
+    width: 60%;
+}
+
+.recepten_beschrijving > :nth-child(2) section {
+    margin: 0 3.125em;
+    margin-bottom: 5em;
+}
+
+.recepten_beschrijving > :nth-child(2) section ol li {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding-top: 1em;
+}
+
+.recepten_beschrijving > :nth-child(2) section ol li img {
     height: 2em;
     padding-right: 0.25em;
 }
 
-main > :nth-last-of-type(5) ul, footer ul {
+.kuru_fasulye main > :last-child {
+    padding: 5em;
+    margin: 0 3.125em 12.5em 3.125em;
+    background: white;
+}
+
+.kuru_fasulye main > :last-child div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kuru_fasulye main > :last-child section ul, .bronvermelding main ul, footer ul {
     display: block;
+}
+
+#bronvermelding-article {
+    text-align: left;
+}
+
+#bronvermelding-article > article > article h2 {
+    font-size: 1em;
+}
+
+.kuru_fasulye main > :last-child section ul li {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 footer div {
